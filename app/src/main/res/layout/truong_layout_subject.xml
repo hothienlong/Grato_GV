@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="#DD1818"
+    android:backgroundTint="#D60E0E">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/keyOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/cardview_default_radius"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/truong_bg_rect_subject"
+            android:backgroundTint="#0F3057"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:weightSum="10">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="295dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#FFFFFF"
+                app:cardCornerRadius="5dp">
+
+                <Button
+                    android:id="@+id/btnSubject"
+                    android:layout_width="314dp"
+                    android:layout_height="68dp"
+                    android:backgroundTint="#fff"
+                    android:shadowColor="#FFFFFF"
+                    android:text="Principle of Programing Language"
+                    android:textColor="#00587A"
+                    android:textColorHighlight="#00587A"
+                    android:textColorHint="#00587A" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:id="@+id/rectBgLogin"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:alpha="1"
+                android:background="@drawable/truong_rect_class_subject" />
+
+            <TextView
+                android:id="@+id/txtClassName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="28dp"
+                android:layout_marginRight="20dp"
+                android:text="L01"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:textStyle="bold"></TextView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

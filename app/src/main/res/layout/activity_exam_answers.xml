@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ExamAnswersActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_marginBottom="10dp"
+        app:navigationIcon="@drawable/long_ic_arrow_back_white_18dp"
+        android:id="@+id/answersToolbar"
+        android:background="@color/palletes3"
+        app:titleTextColor="@color/white"
+        app:title="Answers"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="18dp"
+        app:cardCornerRadius="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:gravity="center"
+            android:background="@color/palletes4"
+            android:layout_width="100dp"
+            android:layout_height="34dp">
+            <TextView
+                android:id="@+id/tvExamCodeId"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:text="001"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/examAnswersRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/layout_exam_answers_row" />
+
+<!--    <ListView-->
+<!--        android:id="@+id/quizScanAnswersListview"-->
+<!--        tools:listitem="@layout/layout_quiz_scan_answers_row"-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+<!--    </ListView>-->
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ViewScanActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        app:navigationIcon="@drawable/long_ic_arrow_back_white_18dp"
+        android:id="@+id/viewScanToolbar"
+        android:background="@color/palletes3"
+        app:titleTextColor="@color/white"
+        app:title="H'Hen Niê"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <LinearLayout
+            android:layout_gravity="right"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content">
+            <TextView
+                android:id="@+id/tvExamCodeId"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:text="Exam code: 001"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+                android:id="@+id/tvGrading"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:text="20 / 20 = 10.00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:src="@drawable/long_scangiaythi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ImageView>
+
+</LinearLayout>

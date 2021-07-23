@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/truong_img_bg">
+
+    <View
+        android:id="@+id/rectangleCoveWelcome"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha="0.65"
+        android:background="@drawable/truong_rectangle_cover"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/rectBgLogin"
+        android:layout_width="309dp"
+        android:layout_height="245dp"
+        android:layout_marginTop="72dp"
+        android:alpha="1"
+        android:background="@drawable/truong_rect_bo_goc"
+        app:layout_constraintEnd_toEndOf="@+id/txtSlogan"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/txtSlogan"
+        app:layout_constraintTop_toBottomOf="@+id/txtSlogan" />
+
+    <ImageView
+        android:id="@+id/logo_grato"
+        android:layout_width="202dp"
+        android:layout_height="184dp"
+        android:layout_marginTop="130dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/truong_logo_grato" />
+
+    <TextView
+        android:id="@+id/txtSlogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Keep your class in hand"
+        android:textColor="#276678"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/logo_grato"
+        app:layout_constraintStart_toStartOf="@+id/logo_grato"
+        app:layout_constraintTop_toBottomOf="@+id/logo_grato" />
+
+    <EditText
+        android:id="@+id/editUserName"
+        android:layout_width="247dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:allowUndo="false"
+        android:background="@drawable/truong_rect_login_name"
+        android:backgroundTint="#FCFCFF"
+        android:drawableLeft="@drawable/truong_icon_username"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:textColorHint="#91919F"
+        app:layout_constraintEnd_toEndOf="@+id/rectBgLogin"
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toStartOf="@+id/rectBgLogin"
+        app:layout_constraintTop_toTopOf="@+id/rectBgLogin" />
+
+    <EditText
+        android:id="@+id/editPassword"
+        android:layout_width="247dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:allowUndo="false"
+        android:background="@drawable/truong_rect_login_name"
+        android:backgroundTint="#FCFCFF"
+        android:drawableLeft="@drawable/truong_icon_password"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:textColorHint="#91919F"
+        app:layout_constraintEnd_toEndOf="@+id/rectBgLogin"
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toStartOf="@+id/rectBgLogin"
+        app:layout_constraintTop_toBottomOf="@+id/editUserName" />
+
+    <Button
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:id="@+id/btnLogin"
+        android:layout_width="250dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#276678"
+        android:text="Sign In"
+        android:textColorHighlight="#ffffff"
+        app:layout_constraintEnd_toEndOf="@+id/rectBgLogin"
+        app:layout_constraintStart_toStartOf="@+id/rectBgLogin"
+        app:layout_constraintTop_toBottomOf="@+id/editPassword" />
+
+    <Button
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:id="@+id/button2"
+        android:layout_width="250dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="3dp"
+        android:backgroundTint="#C83F49"
+        android:text="Sign In with Google"
+        app:layout_constraintEnd_toEndOf="@+id/rectBgLogin"
+        app:layout_constraintStart_toStartOf="@+id/rectBgLogin"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

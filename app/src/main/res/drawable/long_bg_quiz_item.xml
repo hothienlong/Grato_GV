@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <size android:height="200dp"
+        android:width="200dp">
+    </size>
+    <stroke
+        android:width="0.8dp"
+        android:color="#B7B7B4">
+    </stroke>
+
+    <corners android:radius="@dimen/cardview_default_elevation">
+    </corners>
+
+</shape>

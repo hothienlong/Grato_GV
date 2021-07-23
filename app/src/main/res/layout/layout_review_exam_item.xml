@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:background="@drawable/long_bg_review_quiz_scan_item"
+        android:layout_width="365dp"
+        android:layout_height="115dp">
+    </View>
+
+    <LinearLayout
+        android:weightSum="6"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/long_bg_review_quiz_scan_item_layer_top"
+        android:layout_width="370dp"
+        android:layout_height="120dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/long_ic_user">
+        </ImageView>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_weight="4.5"
+            android:layout_width="0dp"
+            android:layout_height="120dp">
+            <TextView
+                android:id="@+id/tvStudentId"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/palletes4"
+                android:text="1812332"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+                android:id="@+id/tvStudentName"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/palletes4"
+                android:text="Cao Xuân Tài"
+                android:maxLines="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+                android:id="@+id/tvExamCodeId"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/palletes4"
+                android:text="Exam code: 001"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@color/palletes4"
+            android:text="9.00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/imgDeleteExamReview"
+            android:background="@drawable/long_bg_ripple_effect"
+            android:layout_gravity="center|right"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/long_ic_delete">
+        </ImageView>
+    </LinearLayout>
+
+
+</FrameLayout>

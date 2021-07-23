@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- set chữ màu trắng nên hơi khó nhìn! -->
+<!-- coordinatorlayout để chặn nested scroll view (ko cho recyclerview scroll một mình) -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:id="@+id/createQuizViewGroup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Những view collapse sẽ để trong appbar -->
+    <!-- #00000000 là màu trong suốt -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarCreateQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapseBarCreateQuiz"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/long_image_collapse"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#4F569CB0"></View>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <!-- View ko collapse để ngoài appbar -->
+    <!-- layout_behavior = bottomsheet để set nằm dưới appbar (nếu là recyclerview là scrollview) -->
+    <!-- Floating button để nổi lên trên => nằm giữa ranh giới toolbar và phần dưới -->
+    <!-- Floating button ko cho set full image nên để nền màu đen.. -->
+
+<!--    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+<!--        android:id="@+id/spRefresh"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/searchQuizName"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            android:id="@+id/quizItemRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:paddingTop="38dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/layout_quiz_item"/>
+<!--    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:src="@drawable/long_ic_add_white_18dp"
+        android:backgroundTint="@color/palletes4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp" />
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchQuizName"
+        android:theme="@style/Platform.MaterialComponents.Light"
+        app:queryHint="Search quiz name"
+        app:searchIcon="@drawable/long_ic_search"
+        android:background="@drawable/long_bg_searchbar"
+        app:queryBackground="@null"
+        app:layout_anchorGravity="bottom|center"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:layout_anchor="@id/appbarCreateQuiz"
+        app:iconifiedByDefault="false"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content">
+    </androidx.appcompat.widget.SearchView>
+<!--    <LinearLayout-->
+<!--        app:layout_anchor="@id/appbarCreateQuiz"-->
+<!--        app:layout_anchorGravity="bottom|center"-->
+<!--        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"-->
+<!--        android:background="@drawable/long_bg_searchbar"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:padding="5dp"-->
+<!--        android:layout_width="320dp"-->
+<!--        android:layout_height="wrap_content">-->
+<!--        <ImageView-->
+<!--            android:layout_marginLeft="8dp"-->
+<!--            android:src="@drawable/long_ic_search"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content">-->
+<!--        </ImageView>-->
+<!--        <TextView-->
+<!--            android:textColorHint="@color/white"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:hint="Search quiz name"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="20sp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content">-->
+<!--        </TextView>-->
+<!--    </LinearLayout>-->
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

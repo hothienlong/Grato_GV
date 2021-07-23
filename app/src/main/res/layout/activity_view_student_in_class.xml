@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        app:navigationIcon="@drawable/long_ic_arrow_back_white_18dp"
+        android:id="@+id/toolbar_11"
+        android:background="@color/palletes3"
+        app:titleTextColor="@color/white"
+        app:title="Principle of programming language"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager_11"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+    </androidx.viewpager.widget.ViewPager>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutInClass"
+        app:tabIndicatorColor="@color/palletes4"
+        app:tabIndicatorHeight="4dp"
+        android:background="@android:color/white"
+        app:tabMode="fixed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.google.android.material.tabs.TabLayout>
+</LinearLayout>

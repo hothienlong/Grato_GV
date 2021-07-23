@@ -1,0 +1,42 @@
+<androidx.cardview.widget.CardView android:layout_marginHorizontal="5dp"
+    android:layout_marginTop="15dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="@dimen/cardview_default_elevation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:weightSum="10"
+        android:padding="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgCheckedAnswerRight"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/long_ic_unchecked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </ImageView>
+        <EditText
+            android:id="@+id/edtAnswerContent"
+            android:layout_weight="9.7"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="15dp"
+            android:text="Answer default text"
+            android:textColorHint="#B7B7B4"
+            android:textColor="@color/black"
+            android:hint="Enter answers here"
+            android:layout_width="0dp"
+            android:layout_height="50dp">
+        </EditText>
+        <ImageView
+            android:id="@+id/imgDeleteAnswer"
+            android:src="@drawable/long_ic_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </ImageView>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

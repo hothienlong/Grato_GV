@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.AddQuestionActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        app:navigationIcon="@drawable/long_ic_arrow_back_white_18dp"
+        android:id="@+id/addQuestionToolbar"
+        android:background="@color/palletes3"
+        app:titleTextColor="@color/white"
+        app:title="Add questions"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <ImageView
+            android:id="@+id/imgSave"
+            android:background="@drawable/long_bg_ripple_effect"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="right"
+            android:src="@drawable/long_ic_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </ImageView>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <com.google.android.material.tabs.TabLayout
+        app:tabTextColor="@color/white"
+        android:id="@+id/addQuestionTabLayout"
+        app:tabIndicatorColor="#A73616"
+        app:tabIndicatorHeight="2.5dp"
+        android:background="@color/palletes3"
+        app:tabMode="scrollable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/addQuestionViewPager"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+    </androidx.viewpager.widget.ViewPager>
+
+</LinearLayout>
